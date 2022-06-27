@@ -21,7 +21,7 @@ public class ProjetoIntegrador {
                 {-10, 35},
         };
 
-        int minTempIndex = -1, maxTempIndex = -1, minTemp = 999, maxTemp = -999;
+        int minTempIndex = -1, maxTempIndex = -1, minTemp = Integer.MAX_VALUE, maxTemp = Integer.MIN_VALUE;
 
         for (int i = 0; i < cities.length; i++) {
             if (temps[i][0] < minTemp) {
