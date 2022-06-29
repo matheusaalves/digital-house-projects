@@ -1,4 +1,4 @@
-package JavaOO;
+package javaOO;
 
 public class AppLivro {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package JavaOO2;
+package javaOO2;
 
 public class Relogio {
     private int hora;

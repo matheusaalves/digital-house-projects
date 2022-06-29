@@ -1,4 +1,4 @@
-package JavaOOHeraça1;
+package javaOOHeraça1;
 
 public class Pessoa {
     private String nome;

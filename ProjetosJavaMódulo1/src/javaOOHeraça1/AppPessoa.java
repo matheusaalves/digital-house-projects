@@ -1,4 +1,4 @@
-package JavaOOHeraça1;
+package javaOOHeraça1;
 
 import java.util.Scanner;
 

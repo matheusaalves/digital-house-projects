@@ -1,4 +1,4 @@
-package JavaOOExceção1;
+package javaOOExceção1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

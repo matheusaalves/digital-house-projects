@@ -1,4 +1,4 @@
-package JavaOO;
+package javaOO;
 
 public class Livro {
     String nome;

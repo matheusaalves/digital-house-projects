@@ -1,4 +1,4 @@
-package JavaOO2PráticaIntegradora1;
+package javaOO2PráticaIntegradora1;
 
 public class Main {
     public static void main(String[] args) {

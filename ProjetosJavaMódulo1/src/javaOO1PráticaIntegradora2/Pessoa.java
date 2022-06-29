@@ -1,4 +1,4 @@
-package JavaOO1PráticaIntegradora2;
+package javaOO1PráticaIntegradora2;
 
 public class Pessoa {
     private String nome, sobrenome, grupoSanguineo, rg, numeroCelular, numeroEmergencia;
