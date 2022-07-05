@@ -14,7 +14,7 @@ import java.util.List;
 
 @Repository
 public class VeiculoRepo {
-    private final String linkFile = "spring02/src/main/resources/dados.json";
+    private final String linkFile = "spring02[Ótimo exemplo para excecao e builder]/src/main/resources/dados.json";
 
     public Veiculo getVeiculo(String placa) {
         List<Veiculo> lista = null;
@@ -41,7 +41,7 @@ public class VeiculoRepo {
         try {
             lista = Arrays.asList(mapper.readValue(new File(linkFile), Veiculo[].class));
         } catch (Exception ex) {
-
+            System.out.println("ENTROU" + ex.getMessage());
         }
 
         return lista;
