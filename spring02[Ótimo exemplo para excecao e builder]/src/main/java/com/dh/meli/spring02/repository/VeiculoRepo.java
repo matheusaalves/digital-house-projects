@@ -1,5 +1,6 @@
 package com.dh.meli.spring02.repository;
 
+import com.dh.meli.spring02.exception.NotFoundException;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -20,15 +21,18 @@ public class VeiculoRepo {
         ObjectMapper mapper = new ObjectMapper();
         try {
             lista = Arrays.asList(mapper.readValue(new File(linkFile), Veiculo[].class));
-            for(Veiculo v: lista) {
-                if(v.getPlaca().equals(placa)) {
-                    return v;
-                }
-            }
         } catch (Exception ex) {
 
         }
-        return null;
+        for(Veiculo v: lista) {
+            if(v.getPlaca().equals(placa)) {
+                return v;
+            }
+        }
+
+        throw new NotFoundException("Veículo não localizado!");
+//        throw new RuntimeException("Veículo não localizado!");
+//        return null;
     }
 
     public List<Veiculo> getAllVeiculo() {
@@ -52,7 +56,7 @@ public class VeiculoRepo {
             listaAtual = Arrays.asList(mapper.readValue(new File(linkFile), Veiculo[].class));
             List<Veiculo> listaCopia = new ArrayList<>(listaAtual);
             listaCopia.add(novoVeiculo);
-            mapper.writeValue(new File(linkFile), listaCopia);
+            mapper.writeValue(new File(linkFile), listaCopia );
         } catch (Exception ex) {
             System.out.println("Erro!" + ex);
         }
